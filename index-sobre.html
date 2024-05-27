@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./assets/css/sobre.css">
+  <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png">
+  <title>Sobre</title>
+</head>
+
+<body>
+  <header>
+    <h2 class="welcome">
+      <span class="cine">Cine</span><span class="flix">Flix</span>
+    </h2>
+    <nav class="navigation">
+      <button class="btn-login">Sobre</button>
+      <a href="./index-login.html" class="active">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Assista a filmes, séries e muito mais</h1>
+          <p>Com o Cineflix, você tem acesso a milhares de filmes, séries e muito mais. Tudo isso em qualquer dispositivo, a qualquer hora.</p>
+          <a href="#" class="btn">Experimente Grátis</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="ultimo">
+      <div class="titulo">
+        <h2>Escolha o plano ideal para você</h2>
+      </div>
+      <div class="planos">
+        <div class="plano">
+          <h3>Premium</h3>
+          <ul>
+            <li>Qualidade de vídeo e áudio excepcional</li>
+            <li>Resolução 4K (Ultra HD) HDR</li>
+            <li>Áudio espacial (som imersivo)</li>
+            <li>Aparelhos compatíveis: TV, computador, celular, tablet</li>
+            <li>Aparelhos para assistir ao mesmo tempo na sua residência: 4</li>
+            <li>Aparelhos de download: 6</li>
+            <span class="preco">R$ 55,90/mês</span>
+          </ul>
+          <div class="centro">
+            <a href="#" class="botao">Assinar</a>
+          </div>
+        </div>
+
+        <div class="plano">
+          <h3>Padrão</h3>
+          <ul>
+            <li>Qualidade de vídeo e áudio excepcional</li>
+            <li>Resolução 1080p (Full HD)</li>
+            <li>Ótima qualidade de áudio</li>
+            <li>Aparelhos compatíveis: TV, computador, celular, tablet</li>
+            <li>Aparelhos para assistir ao mesmo tempo na sua residência: 2</li>
+            <li>Aparelhos de download: 2</li>
+            <span class="preco">R$ 39,90/mês</span>
+          </ul>
+          <a href="#" class="botao">Assinar</a>
+        </div>
+
+        <div class="plano">
+          <h3>Básico</h3>
+          <ul>
+            <li>Qualidade de vídeo e áudio excepcional</li>
+            <li>Resolução 720p (HD)</li>
+            <li>Boa qualidade de áudio</li>
+            <li>Aparelhos compatíveis: TV, computador, celular, tablet</li>
+            <li>Aparelhos para assistir ao mesmo tempo na sua residência: 2</li>
+            <li>Aparelhos de download: 2</li>
+            <span class="preco">R$ 18,90/mês</span>
+          </ul>
+          <a href="#" class="botao">Assinar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    });
+  </script>
+</body>
+
+</html>

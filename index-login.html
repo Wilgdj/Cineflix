@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website com Login & Registro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/images/icon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h2 class="welcome">
+            <span class="cine">Cine</span><span class="flix">Flix</span>
+        </h2>
+        
+        <nav class="navigation">
+            <a href="./index-sobre.html" class="active">Sobre</a>
+            <button class="btn-login">Login</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="wrapper">
+            
+            <!-- Ícone de Fechar -->
+            <span class="close-icon">
+                <ion-icon name="close-circle"></ion-icon>
+            </span>
+            <!-- Login -->
+            <div class="box-login">
+                <h2>Login</h2>
+                <form action="#">
+                    <!-- Caixa de entrada para e-mail -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <!-- Caixa de entrada para senha -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Senha</label>
+                    </div>
+                    <div class="rememberMe">
+                        <label><input type="checkbox">Lembrar-me</label>
+                        <a href="#">Esqueceu a Senha?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Ainda não tem uma conta?<a href="#" class="register-link"> Registre-se Aqui</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Registro -->
+            <div class="box-register">
+                <h2>Registro</h2>
+                <form action="#">
+                    <!-- Caixa de entrada para nome de usuário -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person-add"></ion-icon>
+                        </span>
+                        <input type="text" required>
+                        <label>Nome de Usuário</label>
+                    </div>
+                    <!-- Caixa de entrada para e-mail -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <!-- Caixa de entrada para senha -->
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Senha</label>
+                    </div>
+                    <div class="rememberMe">
+                        <label><input type="checkbox">Eu concordo com os termos e condições</label>
+                    </div>
+                    <button type="submit" class="btn">Registrar</button>
+                    <div class="login-register">
+                        <p>Já tem uma conta?<a href="#" class="login-link"> Faça Login Aqui</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <!-- Script para o Framework Ionic -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

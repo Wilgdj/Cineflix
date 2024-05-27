@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    font-style: normal;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 7rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/image-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5rem; /* Espaço para o header fixo */
+}
+
+.welcome {
+    font-size: 2rem;
+}
+
+.cine {
+    color: white;
+}
+
+.flix {
+    color: blue;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 450;
+    margin-left: 3rem;
+    color: rgb(255, 255, 255);
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.4rem;
+    width: 100%;
+    height: 0.2rem;
+    background: white;
+    border-radius: 0.3rem;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btn-login {
+    width: 6rem;
+    height: 2.3rem;
+    background: transparent;
+    border: 2.5px solid white;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-left: 3rem;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navigation .btn-login:hover {
+    background: white;
+    color: black;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2.5px solid white;
+    border-radius: 0.4rem;
+    backdrop-filter: blur(1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: height .3s ease, transform .5s ease;
+}
+
+.wrapper.active {
+    height: 30rem;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper .box-login {
+    width: 100%;
+    padding: 3rem;
+    transition: transform .5s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .box-login {
+    transition: none;
+    transform: translateX(-25rem);
+}
+
+.wrapper .box-register h2 {
+    text-align: center;
+}
+
+.wrapper .box-register {
+    position: absolute;
+    transition: none;
+    transform: translateX(25rem);
+}
+
+.wrapper.active .box-register {
+    width: 100%;
+    padding: 3rem;
+    transition: transform .5s ease;
+    transform: translateX(0);
+}
+
+.wrapper .close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    font-size: 2.5rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.box-login h2 {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 3rem;
+    border-bottom: 0.2rem solid rgb(255, 255, 255);
+    margin: 2rem 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -0.4rem;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    padding: 0 2rem 0 0.4rem;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 0.5rem;
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    line-height: 3.5rem;
+}
+
+.rememberMe {
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin: -1rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rememberMe label input {
+    accent-color: blue;
+    margin-right: 0.2rem;
+}
+
+.rememberMe a {
+    color: blue;
+    text-decoration: none;
+}
+
+.rememberMe a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 3rem;
+    background: black;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: 0.9rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 500;
+    margin: 2rem 0 0.8rem;
+}
+
+.login-register p a {
+    color: blue;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    header {
+        padding: 1.3rem 5rem;
+    }
+
+    .navigation a {
+        margin-left: 2rem;
+    }
+
+    .navigation .btn-login {
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.3rem 3rem;
+        flex-direction: column;
+    }
+
+    .navigation {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation a {
+        margin: 1rem 0;
+    }
+
+    .navigation .btn-login {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem;
+    }
+
+    .wrapper {
+        width: 90%;
+        height: auto;
+        padding: 2rem;
+    }
+
+    .wrapper.active {
+        height: auto;
+    }
+
+    .box-login, .box-register {
+        padding: 2rem;
+    }
+
+    .input-box {
+        margin: 1rem 0;
+    }
+
+    .btn {
+        height: 2.5rem;
+    }
+
+    .login-register {
+        margin: 1rem 0 0.5rem;
+    }
+}
